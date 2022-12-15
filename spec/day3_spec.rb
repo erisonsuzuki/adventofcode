@@ -21,19 +21,19 @@ RSpec.describe 'day 3' do
 
   it do
     [
-      ["vJrwpWtwJgWrhcsFMMfFFhFp", 16],
-      ["jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", 38],
-      ["PmmdzqPrVvPwwTWBwg", 42],
-      ["wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", 22],
-      ["ttgJtRGJQctTZtZT", 20],
-      ["CrZsJsPPZsGzwwsLwLmpwMDw", 19]
+      ['vJrwpWtwJgWrhcsFMMfFFhFp', 16],
+      ['jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL', 38],
+      ['PmmdzqPrVvPwwTWBwg', 42],
+      ['wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn', 22],
+      ['ttgJtRGJQctTZtZT', 20],
+      ['CrZsJsPPZsGzwwsLwLmpwMDw', 19]
     ].map do |string, result|
       expect(part1(string)).to(eq(result))
     end
 
     [
-      ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL","PmmdzqPrVvPwwTWBwg", 18],
-      ["wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", "ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw", 52]
+      ['vJrwpWtwJgWrhcsFMMfFFhFp', 'jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL', 'PmmdzqPrVvPwwTWBwg', 18],
+      ['wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn', 'ttgJtRGJQctTZtZT', 'CrZsJsPPZsGzwwsLwLmpwMDw', 52]
     ].map do |array|
       expect(part2(array.take(3))).to(eq(array.pop))
     end

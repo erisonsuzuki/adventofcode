@@ -1,4 +1,3 @@
-require 'pry'
 def part1(string)
   first, second = string.chars.each_slice(string.size / 2).to_a
   score first.intersection(second).first.ord
@@ -14,5 +13,5 @@ end
 
 lines = File.readlines('2022/day3/input.txt').map(&:chomp)
 
-p lines.map{ part1(_1) }.sum
-p lines.each_slice(3).to_a.map{ part2(_1.map(&:chars)) }.sum
+p lines.map { part1(_1) }.sum
+p lines.each_slice(3).to_a.map { part2(_1.map(&:chars)) }.sum
