@@ -5,7 +5,7 @@ def part1(opponent, me)
   score = 0
   if opponent_index == me_index
     score = 3
-  elsif opponent_index + 1 == me_index || opponent_index == me_index + 2
+  elsif (opponent_index + 1) % 3
     score = 6
   end
 
@@ -14,13 +14,12 @@ end
 
 def part2(opponent, me)
   opponent_index = %w(a b c).index(opponent.downcase)
-  me_options = %w(x y z)
 
   case me.downcase
   when 'x'
-    1 + me_options.index(me_options[opponent_index - 1] || 'z')
+    1 + (opponent_index - 1) % 3
   when 'z'
-    1 + me_options.index(me_options[opponent_index + 1] || 'x') + 6
+    1 + ((opponent_index + 1) % 3) + 6
   else
     1 + opponent_index + 3
   end

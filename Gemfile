@@ -2,8 +2,7 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
+ruby '3.1.2'
 
 gem "rspec", "~> 3.12"
-
 gem "pry-byebug", "~> 3.9"
