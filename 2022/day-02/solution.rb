@@ -25,7 +25,7 @@ def part2(opponent, me)
   end
 end
 
-lines = File.readlines('2022/day2/input.txt').map(&:chomp).map { _1.split(' ') }
+lines = File.readlines('2022/day-02/input.txt').map(&:chomp).map { _1.split(' ') }
 
 p lines.map { part1(*_1) }.sum
 p lines.map { part2(*_1) }.sum
