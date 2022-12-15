@@ -1,10 +1,9 @@
-def part1(string)
-  first, second = string.chars.each_slice(string.size / 2).to_a
-  score first.intersection(second).first.ord
+def part1(chars)
+  score chars.each_slice(chars.size / 2).inject(:&).first.ord
 end
 
-def part2(array)
-  score array.first.intersection(*array.pop(2)).first.ord
+def part2(chars_list)
+  score chars_list.inject(:&).first.ord
 end
 
 def score(char_score)
@@ -13,5 +12,5 @@ end
 
 lines = File.readlines('2022/day3/input.txt').map(&:chomp)
 
-p lines.map { part1(_1) }.sum
-p lines.each_slice(3).to_a.map { part2(_1.map(&:chars)) }.sum
+p lines.map { part1(_1.chars) }.sum
+p lines.each_slice(3).map { part2(_1.map(&:chars)) }.sum
