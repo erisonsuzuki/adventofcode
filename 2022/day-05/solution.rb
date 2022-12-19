@@ -1,10 +1,6 @@
 def part1(stacks, moves)
   moves.each do |amount, origin, target|
-    crates = [].tap do |crate|
-      amount.times.each { crate << stacks[origin - 1].shift }
-    end
-
-    crates.each { stacks[target - 1].unshift(_1) }
+    stacks[target - 1].unshift(*stacks[origin - 1].shift(amount).reverse)
   end
 
   stacks.map(&:first).join
@@ -12,8 +8,7 @@ end
 
 def part2(stacks, moves)
   moves.each do |amount, origin, target|
-    crates = stacks[origin - 1].shift(amount)
-    stacks[target - 1].unshift(crates).flatten!
+    stacks[target - 1].unshift(*stacks[origin - 1].shift(amount))
   end
 
   stacks.map(&:first).join
