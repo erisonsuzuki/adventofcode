@@ -1,5 +1,3 @@
-require 'pry'
-
 RSpec.describe 'day 4' do
   def part1(first, second)
     left = (first[0]..first[1]).to_a

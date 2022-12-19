@@ -1,5 +1,3 @@
-require 'pry'
-
 RSpec.describe 'day 3' do
   def part1(string)
     first, second = string.chars.each_slice(string.size / 2).to_a

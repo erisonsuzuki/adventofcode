@@ -1,5 +1,3 @@
-require 'pry'
-
 def part1(stacks, moves)
   moves.each do |amount, origin, target|
     crates = [].tap do |crate|
@@ -9,7 +7,7 @@ def part1(stacks, moves)
     crates.each { stacks[target - 1].unshift(_1) }
   end
 
-  stacks.map { _1.first }.join('')
+  stacks.map(&:first).join
 end
 
 def part2(stacks, moves)

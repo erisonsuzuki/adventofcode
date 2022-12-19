@@ -1,5 +1,3 @@
-require 'pry'
-
 RSpec.describe 'day 5' do
   def part1(stacks, moves)
     moves.each do |amount, origin, target|
