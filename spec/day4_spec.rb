@@ -1,6 +1,6 @@
 require 'pry'
 
-RSpec.describe 'day 3' do
+RSpec.describe 'day 4' do
   def part1(first, second)
     left = (first[0]..first[1]).to_a
     right = (second[0]..second[1]).to_a
