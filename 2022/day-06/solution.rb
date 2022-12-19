@@ -1,9 +1,7 @@
 def solution(string, distinct_number)
-  string.chars.each_cons(distinct_number).reduce(distinct_number) do |count, part|
-    return count if part.tally.values.max == 1
-
-    count += 1
-  end
+  string.chars.each_cons(distinct_number).find_index do |part|
+    part.uniq.count == distinct_number
+  end + distinct_number
 end
 
 text = File.read('2022/day-06/input.txt').chomp
