@@ -9,7 +9,7 @@ Perhaps you can delete some files to make space for the update?
 
 You browse around the filesystem to assess the situation and save the resulting terminal output (your puzzle input). For example:
 
-´´´
+```
 $ cd /
 $ ls
 dir a
@@ -33,7 +33,7 @@ $ ls
 8033020 d.log
 5626152 d.ext
 7214296 k
-´´´
+```
 
 The filesystem consists of a tree of files (plain data) and directories (which can contain other directories or files). The outermost directory is called /. You can navigate around the filesystem, moving into or out of directories and listing the contents of the directory you're currently in.
 
@@ -49,7 +49,7 @@ Within the terminal output, lines that begin with $ are commands you executed, v
 
 Given the commands and output in the example above, you can determine that the filesystem looks visually like this:
 
-´´´
+```
 - / (dir)
   - a (dir)
     - e (dir)
@@ -64,7 +64,7 @@ Given the commands and output in the example above, you can determine that the f
     - d.log (file, size=8033020)
     - d.ext (file, size=5626152)
     - k (file, size=7214296)
-´´´
+```
 
 Here, there are four directories: / (the outermost directory), a and d (which are in /), and e (which is in a). These directories also contain files of various sizes.
 
