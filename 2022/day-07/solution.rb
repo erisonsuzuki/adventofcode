@@ -9,11 +9,11 @@ def create_directories(commands)
     when 'cd'
       dir != '..' ? cwd << dir : cwd.pop
     when 'ls'
-      row.map { _1.split(' ') }.each do |args|
-        next unless args[0] != 'dir'
+      row.map { _1.split(' ').first }.each do |arg|
+        next unless arg != 'dir'
 
-        cwd.length.times do |x|
-          directories[cwd[0..x]] += args[0].to_i
+        cwd.length.times do |size|
+          directories[cwd[0..size]] += arg.to_i
         end
       end
     end
